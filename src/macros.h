@@ -33,7 +33,7 @@
   info.GetReturnValue().Set(ret == 0 ? Nan::True() : Nan::False());
 
 #define ASSERT_BUFFER(name, var) \
-  if (!name->IsObject()) { \
+  if (!name->IsUint8Array()) { \
     Nan::ThrowError(#var " must be a buffer"); \
     return; \
   } \
